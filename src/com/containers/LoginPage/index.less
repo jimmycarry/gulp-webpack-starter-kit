@@ -1,0 +1,68 @@
+.login_back{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  right: 0;
+  bottom: 0;
+  background: url("../../../assets/wallpaper-dirge-of-cerberus-final-fantasy-vii-03-1920x1200.jpg");
+  background-size: cover;
+  animation: backgroundAni 1s;
+  background-position: center center;
+}
+@keyframes backgroundAni {
+  from{
+    opacity: 0.03;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.form_wrapper{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  .login_title{
+    font-size: 0.36rem;
+    margin: 0;
+    text-align: center;
+  }
+  .form_container{
+    width: 6rem;
+    padding: 0.5rem;
+    background-color: rgba(255,255,255,0.90)!important;
+  }
+  .input_wrapper{
+    height: 72px;
+  }
+  .auto_wrapper{
+    width: 100% !important;
+  }
+  .login_button{
+    position: relative;
+    background-color: rgba(0,188,212,1)!important;
+    height: 36px!important;
+    button{
+      display: flex!important;
+      justify-content: center;
+      align-items: center;
+      div{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        span{
+          display: block!important;
+        }
+        div{
+          span{
+            display: block!important;
+          }
+        }
+      }
+    }
+  }
+}
