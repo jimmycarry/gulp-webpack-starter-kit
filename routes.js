@@ -11,10 +11,12 @@ const defaultJson = {
 router.get('/*', function(req, res, next) {
     if (req.url.split('/')[1] == 'api') {
         next();
-    } else if (req.url.split('/')[1] == 'sign') {
+    } else if (req.url.split('/')[1] == 'vendor') {
         res.sendFile(path.join(__dirname, './src' + req.url));
-    } else {
+    }
+    else {
         console.log(req.url);
+        console.log(req.url.split('/'));
         console.log(path.join(__dirname, './src/index.html'));
         res.sendFile(path.join(__dirname, './src/index.html'));
     }

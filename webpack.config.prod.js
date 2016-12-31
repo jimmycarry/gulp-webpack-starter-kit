@@ -6,7 +6,7 @@ var autoprefixer = require('autoprefixer');
 console.log(__dirname+'/dist/js');
 var config = {
     entry: {
-        vendor: ['react', 'react-dom','material-ui','redux','redux-immutable','jquery','react-router','react-router-redux','redux-saga','reselect'],
+        vendor: ['react', 'react-dom','material-ui','redux','redux-immutable','react-router','react-router-redux','redux-saga','reselect'],
         app:'./src/com/index.js'
 
     },

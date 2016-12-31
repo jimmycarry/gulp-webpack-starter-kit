@@ -17,13 +17,13 @@ const selectLocationState = () => {
         return prevRoutingStateJS;
     };
 };
-// const layOutSelect = state => state.getIn(['Layouts','Layouts']);
-// const selectors = createSelector([layOutSelect], (layout) => {
-//     return {
-//         index: layout.get('index')
-//     }
-// });
+const homeLayoutSelect = state=>state.get('HomeLayout');
+const homeLayoutSelector = createSelector(homeLayoutSelect,(homelayout)=>{
+    return{
+        drawerVisible:homelayout.get('drawerVisible')
+    }
+})
 export {
     selectLocationState,
-   // selectors
+    homeLayoutSelector
 };
