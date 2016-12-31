@@ -13,8 +13,9 @@ router.get('/*', function(req, res, next) {
         next();
     } else if (req.url.split('/')[1] == 'vendor') {
         res.sendFile(path.join(__dirname, './src' + req.url));
-    }
-    else {
+    } else if(req.url.split('/')[1]=='assets'){
+        res.sendFile(path.join(__dirname, './src' + req.url));
+    } else {
         console.log(req.url);
         console.log(req.url.split('/'));
         console.log(path.join(__dirname, './src/index.html'));

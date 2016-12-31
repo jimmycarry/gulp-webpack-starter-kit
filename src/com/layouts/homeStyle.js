@@ -3,7 +3,8 @@ export const style={
     paddingLeft:'0.24rem',
     paddingRight:'0.24rem',
     alignItems:"center",
-    height:'1.0rem'
+    height:'1.0rem',
+    position:'fixed'
 }
 export const titleStyle={
     fontSize:"0.50rem",

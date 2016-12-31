@@ -35,7 +35,7 @@ class HomeLayout extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{overflow:"hidden"}}>
                 <AppBar
                     title="Phaser Demo"
                     style={style}
