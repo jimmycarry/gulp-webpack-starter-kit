@@ -6,7 +6,7 @@ var autoprefixer = require('autoprefixer');
 var config = {
     entry: {
         vendor: ['react', 'react-dom','material-ui','redux','redux-immutable','react-router','react-router-redux','redux-saga','reselect'],
-        app: ["webpack-hot-middleware/client?quiet=true", './src/com/index.js']
+        app: ["webpack-hot-middleware/client?quiet=true&reload=true", './src/com/index.js']
 
     },
     output: {
@@ -22,26 +22,7 @@ var config = {
         loaders: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel',
-            query: {
-                presets: ['es2015', 'stage-0', 'react'],
-                env: {
-                    // only enable it when process.env.NODE_ENV is 'development' or undefined
-                    development: {
-                        plugins: [["react-transform", {
-                            transforms: [{
-                                transform: "react-transform-hmr",
-                                // if you use React Native, pass "react-native" instead:
-                                imports: ["react"],
-                                // this is important for Webpack HMR:
-                                locals: ["module"]
-                            }]
-                            // note: you can put more transforms into array
-                            // this is just one of them!
-                        }]]
-                    }
-                }
-            }
+            loader: 'babel-loader?cacheDirectory=true'
         }, {
             test: /\.css/,
             loader: 'style!css!postcss',
