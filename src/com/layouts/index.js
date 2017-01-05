@@ -21,7 +21,9 @@ import {style, titleStyle, iconLeftStyle,drawerStyle,listItemStyle} from './home
 import {homeLayoutSelector} from './selectors';
 import {openDrawer} from './actions';
 import {location,numlocation} from './locationEnum';
-import Icon from './component/icon'
+import Icon from './component/icon';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import './routes.css';
 const SeletableList = makeSelectable(List);
 class HomeLayout extends Component {
     constructor(props) {
@@ -70,7 +72,16 @@ class HomeLayout extends Component {
                     </SeletableList>
 
                 </Drawer>
-                {this.props.children}
+                {/*this.props.children*/}
+                {
+                    <ReactCSSTransitionGroup 
+                        transitionEnter={true} 
+                        transitionName='route' 
+                        transitionEnterTimeout={500} 
+                        transitionLeaveTimeout={1000}>
+                        {React.cloneElement(this.props.children,{key:this.props.location.pathname})}
+                    </ReactCSSTransitionGroup>
+                }
             </div>
         )
     }

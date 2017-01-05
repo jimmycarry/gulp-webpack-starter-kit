@@ -1,5 +1,6 @@
 import React,{PropTypes,Component} from 'react';
 import Card from '../../common/components/Card';
+import Wrapper from '../../common/components/Wrapper';
 export default class HomePage extends Component{
     constructor(props){
         super(props);
@@ -7,7 +8,7 @@ export default class HomePage extends Component{
     }
     render(){
         return(
-            <div style={{padding:'0.20rem',marginTop:'1.0rem'}}>
+            <Wrapper>
                 <Card
                     images='./assets/fire-rate.jpg'
                 >
@@ -24,7 +25,12 @@ export default class HomePage extends Component{
                 >
                     ARCADE PHYSICS
                 </Card>
-            </div>
+                 <Card
+                    images='./assets/group-vs-group.jpg'
+                >
+                    My Baby
+                </Card>
+            </Wrapper>
         )
     }
 }

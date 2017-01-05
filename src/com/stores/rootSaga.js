@@ -1,3 +1,6 @@
+/**
+ * @注册sagas 
+ * */
 import {fork, cancel, take, put} from 'redux-saga/effects';
 import configSagas from '../global/config/sagas';
 import LoginSagas from '../containers/LoginPage/sagas'

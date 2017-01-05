@@ -1,3 +1,6 @@
+/**
+ * @stores
+ * */
 import {applyMiddleware,compose} from 'redux';
 import {combineReducers} from 'redux-immutable';
 import {browserHistory,hashHistory} from 'react-router';

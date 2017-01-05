@@ -3,7 +3,7 @@ export const cardStyle ={
     width:'90%',
     margin:'auto',
     fontSize:"0.36rem",
-    minHeight:'3.0rem',
+    minHeight:'5.68rem',
     marginBottom:"0.20rem",
     height:'auto',
     overflow:"hidden"
