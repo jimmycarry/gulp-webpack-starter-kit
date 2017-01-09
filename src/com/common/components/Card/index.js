@@ -19,8 +19,8 @@ class Card extends Component {
         return (
             <Paper zDepth={1} style={cardStyle} {...others}>
                 <div className={styles.img_wrapper}>
-                    <LazyLoad height={'100%'}>
-                        <ReactCSSTransitionGroup
+                    <LazyLoad height={'100%'} offset={70}>
+                        <ReactCSSTransitionGroup 
                             transitionName='card'
                             transitionAppear={true}
                             transitionAppearTimeout={300}

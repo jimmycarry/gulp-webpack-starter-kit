@@ -4,7 +4,7 @@ import styles from './index.less';
 class AnimationPage extends Component{
     constructor(props){
         super(props);
-        this.displayName = 'Animation'
+        this.displayName = 'Animation';
     }
     render(){
         return(

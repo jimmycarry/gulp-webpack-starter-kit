@@ -13,17 +13,7 @@ export default function App() {
     return (
         <MuiThemeProvider>
             <Provider store={store}>
-                <Router history={history} routes={require('../../routes/routes').default}>
-                    {/*<Route path='/' component={MainLayout}>
-                        <IndexRedirect to='login'/>
-                        <Route path="login" component={LoginPage}/>
-                        <Route component={HomeLayout}>
-                            <IndexRedirect to='home'/>
-                            <Route path='home' component={HomePage}/>
-                            <Route path='animation(/:id)' component={AnimationPage}/>
-                        </Route>
-                    </Route>*/}
-                </Router>
+                <Router history={history} routes={require('../../routes/routes').default}/>
             </Provider>
         </MuiThemeProvider>
     )
