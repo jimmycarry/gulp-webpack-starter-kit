@@ -3,6 +3,7 @@ var glob = require('glob');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var autoprefixer = require('autoprefixer');
+var HappyPack = require('happypack');
 var config = {
     entry: {
         vendor: ['react', 'react-dom','material-ui','redux','redux-immutable','react-router','react-router-redux','redux-saga','reselect'],
@@ -22,7 +23,7 @@ var config = {
         loaders: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader?cacheDirectory=true'
+            loader: 'happypack/loader'
         }, {
             test: /\.css/,
             loader: 'style!css!postcss',
@@ -47,6 +48,9 @@ var config = {
             "process.env": {
                 "NODE_ENV": JSON.stringify("development")
             }
+        }),
+        new HappyPack({
+            loaders:['babel-loader?cacheDirectory=true']
         }),
         new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
         new webpack.HotModuleReplacementPlugin(),
