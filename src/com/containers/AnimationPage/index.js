@@ -9,7 +9,7 @@ class AnimationPage extends Component{
     render(){
         return(
             <Wrapper>
-                <h3 className={styles.title} style={{paddingLeft:10,paddingRight:10}}>Animation Page</h3>
+                <h3 className={styles.title} style={{paddingLeft:10,paddingRight:10}}>Animation Pages</h3>
             </Wrapper>
         )
     }

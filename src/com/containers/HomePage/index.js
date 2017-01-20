@@ -12,13 +12,13 @@ export default class HomePage extends Component{
                 <Card
                     images='./assets/fire-rate.jpg'
                 >
-                    New Plugin: Weapon
+                    New Plugin: Weapons
                 </Card>
 
                 <Card
                     images='./assets/multiple-anims.jpg'
                 >
-                    Animation
+                    Animations
                 </Card>
                 <Card
                     images='./assets/group-vs-group.jpg'
